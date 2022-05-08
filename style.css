@@ -49,6 +49,33 @@ strong {
     background: #e40f0a;
 }
 
+.btn-default {
+    border-color: #e5e5e5;
+    background: #e5e5e5;
+    color: #222;
+}
+
+.btn-default:hover {
+    border-color: #b1b1b1;
+    box-shadow: 0 2px 4px 0 rgb(0 0 0 / 25%);
+}
+
+.btn-warning {
+    border-color: #feecaf;
+    background: #feecaf;
+    color: #222;
+}
+
+.btn-warning:hover {
+    border-color: #f7c657;
+    background: #feecaf;
+    box-shadow: 0 2px 4px 0 rgb(0 0 0 / 25%);
+}
+
+.red-asterisk {
+    color: #ed4642;
+}
+
 .sidebar-header,
 .navbar {
     height: 64px;
@@ -56,6 +83,7 @@ strong {
 }
 
 .navbar {
+    background: #fff;
     display: block;
     padding: 0.75rem 2rem;
 }
@@ -458,6 +486,153 @@ footer {
 
 .sidebar-mini .content-side {
     padding-left: 75px;
+}
+
+
+.orders-table [type=button] {
+    appearance: initial;
+    -webkit-appearance: initial;
+    -moz-appearance: inherit;
+}
+
+
+.modal .btn-close {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+}
+
+.modal h2 {
+    font-size: 38px;
+    font-weight: 700;
+    line-height: 51px;
+    margin: 0;
+}
+
+
+.nav.nav-tabs {
+    margin: 20px 0;
+}
+
+.nav.nav-tabs li {
+    margin-right: 10px;
+}
+
+.nav.nav-tabs a {
+    color: #555;
+    border: none;
+    font-size: 14px;
+}
+
+.nav.nav-tabs a span {
+    font-weight: 700;
+}
+
+.nav.nav-tabs a:hover,
+.nav.nav-tabs a.active {
+    color: #222;
+    border-bottom: 3px solid #222;
+}
+
+
+.table {
+    font-size: 14px;
+}
+
+.table th {
+    border-bottom: 2px solid #ddd !important;
+}
+
+.table th,
+.table td {
+    padding: 10px;
+    vertical-align: middle;
+}
+
+.table th:last-child,
+.table td:last-child {
+    text-align: right;
+}
+
+.table .status {
+    display: block;
+    width: 100%;
+    max-width: 190px;
+    background: #feecaf;
+    color: #222;
+    border-radius: 5px;
+    padding: 4px 12px;
+    font-size: 14px;
+}
+
+.table .status-active {
+    color: #fff;
+    background: #0c8512;
+}
+
+.table .status-draft {
+    background: #d5eff6;
+    color: #222;
+}
+
+
+
+.badge {
+    padding: 2px 8px;
+    line-height: 12px;
+    font-size: 12px;
+    border-radius: 12px;
+    font-weight: 700;
+    margin-right: 5px;
+}
+
+.badge.bg-light {
+    color: #222 !important;
+    background: #e5e5e5 !important;
+}
+
+.badge.bg-primary {
+    background: #017da9 !important;
+}
+
+
+
+.order-modal h5 {
+    font-size: 18px;
+    font-weight: 700;
+    color: #222;
+    line-height: 35px;
+}
+
+.order-modal .btn {
+    width: 100%;
+    margin-top: 15px;
+}
+
+.order-modal .table .title {
+    margin: 10px 0;
+}
+
+.order-modal .table .print {
+    color: #777;
+}
+
+.order-modal .total {
+    margin: 20px 0;
+}
+
+.order-modal .total .row {
+    padding: 0 15px;
+}
+
+.order-modal .total .row > div {
+    border-bottom: 1px solid #e5e5e5;
+    line-height: 45px;
+}
+
+.order-modal .price-desc {
+    padding: 0 15px;
+    font-size: 14px;
 }
 
 
