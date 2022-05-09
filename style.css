@@ -690,9 +690,56 @@ footer {
     max-width: 50px;
 }
 
-.create-store button {
+.create-store a {
     width: 100%;
     margin: 30px 0 10px;
+}
+
+
+.connect-store {
+    font-size: 14px;
+}
+
+.connect-store .store-item {
+    border: 1px solid #e5e5e5;
+    border-radius: 5px;
+    padding: 15px;
+}
+
+.connect-store img {
+    float: left;
+    max-height: 52px;
+    margin-right: 20px;
+}
+
+.connect-store strong {
+    display: block;
+    font-size: 15px;
+    padding-top: 5px;
+}
+
+.connect-store p {
+    clear: both;
+    margin: 30px 0;
+    min-height: 50px;
+}
+
+.connect-store .btn {
+    width: 100%;
+}
+
+
+.breadcrumbs {
+    margin-bottom: 20px;
+}
+
+.breadcrumbs a {
+    text-decoration: none;
+    color: #1164a9;
+}
+
+.breadcrumbs .current {
+    font-weight: 700;
 }
 
 
