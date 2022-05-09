@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
-    <title>Orders - Dashboard Robby</title>
+    <title>Stores - Dashboard Robby</title>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
@@ -46,7 +46,7 @@
                             </a>
                         </li>
                         <li>
-                            <a class="nav-link active" href="orders.html">
+                            <a class="nav-link" href="orders.html">
                                 <span class="mdi mdi-format-list-bulleted"></span> Orders
                             </a>
                         </li>
@@ -61,7 +61,7 @@
                             </a>
                         </li>
                         <li>
-                            <a class="nav-link" href="stores.html">
+                            <a class="nav-link active" href="stores.html">
                                 <span class="mdi mdi-store"></span> Stores
                             </a>
                         </li>
@@ -220,94 +220,60 @@
 
                 <div class="main-wrapper">
                     <div class="main-content">
-                        <h2>Orders</h2>
+                        <h2>Stores</h2>
+                        <p>Connect an existing store or create a new one by selecting a platform to sell you products on. To place orders manually or connect using API, create a custom store.</p>
+                        <br />
 
-                        <div class="orders-table">
-                            <div class="row">
-                                <div class="col-4">
-                                    <input type="text" placeholder="Search" class="form-control" />
-                                </div>
-                                <div class="col-4">
-                                    <select class="form-select">
-                                        <option selected>All statuses</option>
-                                        <option value="1">Active</option>
-                                        <option value="2">Draft</option>
-                                        <option value="3">Cancelled</option>
-                                    </select>
-                                </div>
-                                <div class="col-4">
-                                    <select class="form-select">
-                                        <option value="1">10 per page</option>
-                                        <option selected>25 per page</option>
-                                        <option value="1">50 per page</option>
-                                        <option value="2">100 per page</option>
-                                    </select>
+                        <div class="stores-list">
+                            <div class="store-item">
+                                <div class="row">
+                                    <div class="col-12 col-md-6">
+                                        <img src="assets/images/shopify-logo.png" alt="" />
+                                        <h6>Shopify</h6>
+                                    </div>
+                                    <div class="col-12 col-md-6 text-end">
+                                        <button class="btn btn-default">Add product</button>
+                                        <button class="btn btn-primary">View store</button>
+                                    </div>
                                 </div>
                             </div>
+                            <div class="store-item">
+                                <div class="row">
+                                    <div class="col-12 col-md-6">
+                                        <img src="assets/images/etsy-logo.png" alt="" />
+                                        <h6>Etsy</h6>
+                                    </div>
+                                    <div class="col-12 col-md-6 text-end">
+                                        <button class="btn btn-default" disabled>Add product</button>
+                                        <button class="btn btn-primary">View store</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="store-item">
+                                <div class="row">
+                                    <div class="col-12 col-md-6">
+                                        <img src="assets/images/amazon-logo.png" alt="" />
+                                        <h6>Amazon</h6>
+                                    </div>
+                                    <div class="col-12 col-md-6 text-end">
+                                        <button class="btn btn-default" disabled>Add product</button>
+                                        <button class="btn btn-primary">View store</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
 
-                            <ul class="nav nav-tabs">
-                                <li class="nav-item">
-                                    <a class="nav-link active" aria-current="page" href="#"><span>All</span></a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#"><span>Active</span> (20)</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#"><span>Draft</span> (1)</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#"><span>Cancelled</span> (2)</a>
-                                </li>
-                            </ul>
-
-                            <table class="table table-hover">
-                                <thead>
-                                    <tr>
-                                        <th>Order</th>
-                                        <th>Date</th>
-                                        <th>From</th>
-                                        <th>Status</th>
-                                        <th>Total</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr type="button" data-bs-toggle="modal" data-bs-target="#orderModal">
-                                        <td>PF75349744</td>
-                                        <td>3 minutes ago</td>
-                                        <td>Germany</td>
-                                        <td><span class="status status-active">Active</span></td>
-                                        <td>$23.25</td>
-                                    </tr>
-                                    <tr type="button" data-bs-toggle="modal" data-bs-target="#orderModal">
-                                        <td>PF75349744</td>
-                                        <td>15 minutes ago</td>
-                                        <td>Germany</td>
-                                        <td><span class="status status-active">Active</span></td>
-                                        <td>$23.25</td>
-                                    </tr>
-                                    <tr type="button" data-bs-toggle="modal" data-bs-target="#orderModal">
-                                        <td>PF75349744</td>
-                                        <td>2 hours ago</td>
-                                        <td>Germany</td>
-                                        <td><span class="status status-draft">Draft</span></td>
-                                        <td>$23.25</td>
-                                    </tr>
-                                    <tr type="button" data-bs-toggle="modal" data-bs-target="#orderModal">
-                                        <td>PF75349744</td>
-                                        <td>May 5 2022, 3:49am</td>
-                                        <td>Germany</td>
-                                        <td><span class="status status-draft">Draft</span></td>
-                                        <td>$23.25</td>
-                                    </tr>
-                                    <tr type="button" data-bs-toggle="modal" data-bs-target="#orderModal">
-                                        <td>PF75349744</td>
-                                        <td>May 5 2022, 3:49am</td>
-                                        <td>Germany</td>
-                                        <td><span class="status status-cancelled">Cancelled</span></td>
-                                        <td>$23.25</td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                        <div class="create-store">
+                            <h4>To create a new store, choose your method</h4>
+                            <div class="row justify-content-center">
+                                <div class="col-12 col-lg-4">
+                                    <strong>Choose your store's platform</strong>
+                                    <img src="assets/images/shopify-logo.png" alt="" />
+                                    <img src="assets/images/etsy-logo.png" alt="" />
+                                    <img src="assets/images/amazon-logo.png" alt="" />
+                                    <button class="btn btn-primary">Choose platform</button>
+                                </div>
+                            </div>
                         </div>
 
                     </div>
