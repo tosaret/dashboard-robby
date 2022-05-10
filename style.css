@@ -644,6 +644,10 @@ footer {
     font-size: 14px;
 }
 
+.order-modal .shipment-report {
+    background-color: #eaffb7;
+}
+
 
 
 .stores-list .store-item {
@@ -795,6 +799,80 @@ footer {
 
 .breadcrumbs .current {
     font-weight: 700;
+}
+
+
+
+.status-bar {
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    margin: 0 -15px 15px;
+}
+
+.status-bar.status-draft {
+    background-color: #d5eff6;
+}
+
+.status-bar.status-cancelled {
+    background-color: #feecaf;
+}
+
+.status-bar.status-fullfilled {
+    color: #fff;
+    background-color: #0c8512;
+}
+
+
+.order-history h3 {
+    font-size: 24px;
+    font-weight: 700;
+    margin: 30px 10px;
+}
+.timeline {
+    margin-left: 20px;
+    border-left: 1px solid hsl(0, 0%, 90%);
+    position: relative;
+    list-style: none;
+}
+
+.timeline .timeline-item {
+    position: relative;
+    padding-bottom: 20px;
+}
+
+.timeline .timeline-item:after {
+    position: absolute;
+    display: block;
+    top: 0;
+}
+
+.timeline .timeline-item:after {
+    background: #fff;
+    border: 3px solid hsl(0, 0%, 90%);
+    left: -40px;
+    border-radius: 50%;
+    height: 16px;
+    width: 16px;
+    content: "";
+}
+
+
+
+.pricing-breakdown ul {
+    width: 100%;
+    padding: 15px;
+    font-size: 14px;
+}
+
+.pricing-breakdown li {
+    border-bottom: 1px solid #e5e5e5;
+    padding: 10px 0;
+}
+
+.pricing-breakdown li:last-child {
+    border: none;
+    padding-bottom: 0;
 }
 
 

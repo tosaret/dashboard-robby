@@ -387,7 +387,16 @@
                             <div>1 item</div>
                         </div>
                     </div>
+
                     <br />
+                    <div class="row">
+                        <div class="col-12">
+                            <!-- <div class="status-bar status-draft">Order is saved as draft. Complete it anytime</div> -->
+                            <!-- <div class="status-bar status-cancelled">Order is cancelled</div> -->
+                            <div class="status-bar status-fullfilled"><strong>Order is fullfilled.</strong> Delivered on May 10, 2022</div>
+                        </div>
+                    </div>
+
                     <div class="row">
                         <div class="col-12 col-lg-9">
                             <table class="table">
@@ -400,22 +409,15 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr>
-                                        <td>
-                                            <div class="row">
-                                                <div class="col-2 col-xl-1">
-                                                    <img src="http://placehold.jp/40x40.png" class="img-fluid" alt="" />                                                </div>
-                                                <div class="col-10">
-                                                    <span class="badge bg-light text-dark">Printing (DTG)</span>
-                                                    <span class="badge bg-primary">Premium</span>
-                                                    <div class="title">Unisex Organic Sweatshirt | SOL'S 03574 (Black / L)</div>
-                                                    <div class="print">Front print: <a href="#">Mockup</a></div>
-                                                </div>
-                                            </div>
+                                    <tr class="shipment-report">
+                                        <td colspan="2">
+                                            <p>Shipment report #231232221 shipped on Jul 30 via USPS Priority Mail #4400300000000</p>
+                                            <p><strong>Delivered: Aug 4, 2016</strong></p>
+                                            <p><a href="#">P-slip</a></p>
                                         </td>
-                                        <td>1</td>
-                                        <td>$23.25</td>
-                                        <td>$23.25&nbsp;<span class="red-asterisk">*</span></td>
+                                        <td colspan="2">
+                                            <a href="#" class="btn btn-default">Problem report</a>
+                                        </td>
                                     </tr>
                                     <tr>
                                         <td>
@@ -432,7 +434,7 @@
                                         </td>
                                         <td>1</td>
                                         <td>$23.25</td>
-                                        <td>$23.25&nbsp;<span class="red-asterisk">*</span></td>
+                                        <td>$23.25</td>
                                     </tr>
                                     <tr>
                                         <td>
@@ -449,7 +451,24 @@
                                         </td>
                                         <td>1</td>
                                         <td>$23.25</td>
-                                        <td>$23.25&nbsp;<span class="red-asterisk">*</span></td>
+                                        <td>$23.25</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="row">
+                                                <div class="col-2 col-xl-1">
+                                                    <img src="http://placehold.jp/40x40.png" class="img-fluid" alt="" />                                                </div>
+                                                <div class="col-10">
+                                                    <span class="badge bg-light text-dark">Printing (DTG)</span>
+                                                    <span class="badge bg-primary">Premium</span>
+                                                    <div class="title">Unisex Organic Sweatshirt | SOL'S 03574 (Black / L)</div>
+                                                    <div class="print">Front print: <a href="#">Mockup</a></div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>1</td>
+                                        <td>$23.25</td>
+                                        <td>$23.25</td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -469,9 +488,35 @@
                                 </div>
                             </div>
 
-                            <p class="price-desc">
-                                 <span class="red-asterisk">*</span> Our product prices can change depending on where the order is fulfilled and which currency you use to pay for it. For example, if you order a t-shirt that we only fulfill in the US and you pay for it in EUR, the price you pay would be our USD price converted to EUR.
-                            </p>
+                            <div class="order-history">
+                                <h3>Order history</h3>
+
+                                <ul class="timeline">
+                                    <li class="timeline-item">
+                                        <div class="text-muted fw-bold">10 May 2022</div>
+                                        <p>
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit
+                                            necessitatibus adipisci, ad alias
+                                        </p>
+                                    </li>
+                                    <li class="timeline-item">
+                                        <div class="text-muted fw-bold">10 May 2022</div>
+                                        <p>
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit
+                                            necessitatibus adipisci, ad alias
+                                        </p>
+                                    </li>
+                                    <li class="timeline-item">
+                                        <div class="text-muted fw-bold">10 May 2022</div>
+                                        <p>
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit
+                                            necessitatibus adipisci, ad alias
+                                        </p>
+                                    </li>
+                                </ul>
+                            </div>
+
+
                         </div>
                         <div class="col-12 col-lg-3">
                             <h5>Shipping Address</h5>
@@ -484,6 +529,44 @@
                             <button class="btn btn-default">Change Order</button>
                             <button class="btn btn-default">Copy Order</button>
                             <button class="btn btn-warning">Delete Order</button>
+
+                            <div class="pricing-breakdown dropdown">
+                                <button class="btn btn-secondary dropdown-toggle" type="button" id="breakdown" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Pricing breakdown
+                                </button>
+                                <ul class="dropdown-menu" aria-labelledby="breakdown">
+                                    <li>
+                                        <div class="row">
+                                            <div class="col-8">
+                                                <strong>Your customer pays:</strong>
+                                            </div>
+                                            <div class="col-4 text-end">
+                                                $25.00
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="row">
+                                            <div class="col-8">
+                                                <strong>Prinful price:</strong>
+                                            </div>
+                                            <div class="col-4 text-end">
+                                                $20.00
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="row">
+                                            <div class="col-8">
+                                                <strong>Your profit:</strong>
+                                            </div>
+                                            <div class="col-4 text-end">
+                                                $5.00
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
