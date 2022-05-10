@@ -489,10 +489,19 @@ footer {
 }
 
 
+.orders-table td {
+    white-space: nowrap;
+}
+
 .orders-table [type=button] {
     appearance: initial;
     -webkit-appearance: initial;
     -moz-appearance: inherit;
+}
+
+.orders-table .new-order-button {
+    width: 100%;
+    margin-bottom: 15px;
 }
 
 
@@ -849,5 +858,23 @@ footer {
 
     .footer-content .nav a {
         padding-left: 0;
+    }
+
+    .orders-table .filters input[type=text] {
+        width: calc(100% - 55px);
+        float: left;
+        margin-right: 15px;
+    }
+
+    .orders-table .filters .btn {
+        min-width: 38px;
+        width: 38px;
+        height: 38px;
+        padding: 0;
+        background-color: #fff;
+    }
+
+    .orders-table .filters .col-12 {
+        margin-bottom: 15px;
     }
 }

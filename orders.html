@@ -223,11 +223,16 @@
                         <h2>Orders</h2>
 
                         <div class="orders-table">
-                            <div class="row">
-                                <div class="col-4">
+                            <a href="#" class="new-order-button btn btn-primary d-md-none">New order</a>
+
+                            <div class="filters row">
+                                <div class="col-12 col-md-3">
                                     <input type="text" placeholder="Search" class="form-control" />
+                                    <button class="btn btn-default d-md-none" data-bs-toggle="collapse" data-bs-target=".filterCollapse">
+                                        <span class="mdi mdi-filter-variant"></span>
+                                    </button>
                                 </div>
-                                <div class="col-4">
+                                <div class="col-12 col-md-3 filterCollapse collapse d-md-block">
                                     <select class="form-select">
                                         <option selected>All statuses</option>
                                         <option value="1">Active</option>
@@ -235,7 +240,15 @@
                                         <option value="3">Cancelled</option>
                                     </select>
                                 </div>
-                                <div class="col-4">
+                                <div class="col-12 col-md-3 filterCollapse collapse d-md-block">
+                                    <select class="form-select">
+                                        <option selected>All stores</option>
+                                        <option value="1">Shopify</option>
+                                        <option value="2">Etsy</option>
+                                        <option value="3">Amazon</option>
+                                    </select>
+                                </div>
+                                <div class="col-12 col-md-3 filterCollapse collapse d-md-block">
                                     <select class="form-select">
                                         <option value="1">10 per page</option>
                                         <option selected>25 per page</option>
@@ -260,54 +273,56 @@
                                 </li>
                             </ul>
 
-                            <table class="table table-hover">
-                                <thead>
-                                    <tr>
-                                        <th>Order</th>
-                                        <th>Date</th>
-                                        <th>From</th>
-                                        <th>Status</th>
-                                        <th>Total</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr type="button" data-bs-toggle="modal" data-bs-target="#orderModal">
-                                        <td>PF75349744</td>
-                                        <td>3 minutes ago</td>
-                                        <td>Germany</td>
-                                        <td><span class="status status-active">Active</span></td>
-                                        <td>$23.25</td>
-                                    </tr>
-                                    <tr type="button" data-bs-toggle="modal" data-bs-target="#orderModal">
-                                        <td>PF75349744</td>
-                                        <td>15 minutes ago</td>
-                                        <td>Germany</td>
-                                        <td><span class="status status-active">Active</span></td>
-                                        <td>$23.25</td>
-                                    </tr>
-                                    <tr type="button" data-bs-toggle="modal" data-bs-target="#orderModal">
-                                        <td>PF75349744</td>
-                                        <td>2 hours ago</td>
-                                        <td>Germany</td>
-                                        <td><span class="status status-draft">Draft</span></td>
-                                        <td>$23.25</td>
-                                    </tr>
-                                    <tr type="button" data-bs-toggle="modal" data-bs-target="#orderModal">
-                                        <td>PF75349744</td>
-                                        <td>May 5 2022, 3:49am</td>
-                                        <td>Germany</td>
-                                        <td><span class="status status-draft">Draft</span></td>
-                                        <td>$23.25</td>
-                                    </tr>
-                                    <tr type="button" data-bs-toggle="modal" data-bs-target="#orderModal">
-                                        <td>PF75349744</td>
-                                        <td>May 5 2022, 3:49am</td>
-                                        <td>Germany</td>
-                                        <td><span class="status status-cancelled">Cancelled</span></td>
-                                        <td>$23.25</td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                            <div class="table-responsive">
+                                <table class="table table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th>Order</th>
+                                            <th>Date</th>
+                                            <th>Name</th>
+                                            <th>Status</th>
+                                            <th>Total</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr type="button" data-bs-toggle="modal" data-bs-target="#orderModal">
+                                            <td>PF75349744</td>
+                                            <td>3 minutes ago</td>
+                                            <td>Shanna Brown</td>
+                                            <td><span class="status status-active">Active</span></td>
+                                            <td>$23.25</td>
+                                        </tr>
+                                        <tr type="button" data-bs-toggle="modal" data-bs-target="#orderModal">
+                                            <td>PF75349744</td>
+                                            <td>15 minutes ago</td>
+                                            <td>Kyle Jorgenson</td>
+                                            <td><span class="status status-active">Active</span></td>
+                                            <td>$23.25</td>
+                                        </tr>
+                                        <tr type="button" data-bs-toggle="modal" data-bs-target="#orderModal">
+                                            <td>PF75349744</td>
+                                            <td>2 hours ago</td>
+                                            <td>Jadyn Olsem</td>
+                                            <td><span class="status status-draft">Draft</span></td>
+                                            <td>$23.25</td>
+                                        </tr>
+                                        <tr type="button" data-bs-toggle="modal" data-bs-target="#orderModal">
+                                            <td>PF75349744</td>
+                                            <td>May 5 2022, 3:49am</td>
+                                            <td>**** ****</td>
+                                            <td><span class="status status-draft">Draft</span></td>
+                                            <td>$23.25</td>
+                                        </tr>
+                                        <tr type="button" data-bs-toggle="modal" data-bs-target="#orderModal">
+                                            <td>PF75349744</td>
+                                            <td>May 5 2022, 3:49am</td>
+                                            <td>**** ****</td>
+                                            <td><span class="status status-cancelled">Cancelled</span></td>
+                                            <td>$23.25</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
 
                     </div>
