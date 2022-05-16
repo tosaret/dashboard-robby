@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
-    <title>Orders - Dashboard Robby</title>
+    <title>Product Templates - Dashboard Robby</title>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
@@ -46,12 +46,12 @@
                             </a>
                         </li>
                         <li>
-                            <a class="nav-link active" href="orders.html">
+                            <a class="nav-link" href="orders.html">
                                 <span class="mdi mdi-format-list-bulleted"></span> Orders
                             </a>
                         </li>
                         <li>
-                            <a class="nav-link" href="product-templates.html">
+                            <a class="nav-link active" href="product-templates.html">
                                 <span class="mdi mdi-drawing-box"></span> Product templates
                             </a>
                         </li>
@@ -220,111 +220,63 @@
 
                 <div class="main-wrapper">
                     <div class="main-content">
-                        <h2>Orders</h2>
+                        <h2>Product Templates <button type="button" class="btn btn-primary float-end"  data-bs-toggle="modal" data-bs-target="#templateModal">Create new</button></h2>
+                        <p>A product template is a combo of print files and Printful products. Pick a product, add a design, save it, and use it as you like. Edit the templates, create collections, showcase your work, or push them to your store for selling.</p>
 
-                        <div class="orders-table">
-                            <a href="#" class="new-order-button btn btn-primary d-md-none">New order</a>
-
+                        <div class="templates-list">
                             <div class="filters row">
-                                <div class="col-12 col-md-3">
-                                    <input type="text" placeholder="Search" class="form-control" />
-                                    <button class="btn btn-default d-md-none" data-bs-toggle="collapse" data-bs-target=".filterCollapse">
-                                        <span class="mdi mdi-filter-variant"></span>
-                                    </button>
+                                <div class="col-6">
+                                    <input type="text" class="form-control" placeholder="Search" />
                                 </div>
-                                <div class="col-12 col-md-3 filterCollapse collapse d-md-block">
-                                    <select class="form-select">
-                                        <option selected>All statuses</option>
-                                        <option value="1">Active</option>
-                                        <option value="2">Draft</option>
-                                        <option value="3">Cancelled</option>
-                                    </select>
-                                </div>
-                                <div class="col-12 col-md-3 filterCollapse collapse d-md-block">
-                                    <select class="form-select">
-                                        <option selected>All stores</option>
-                                        <option value="1">Shopify</option>
-                                        <option value="2">Etsy</option>
-                                        <option value="3">Amazon</option>
-                                    </select>
-                                </div>
-                                <div class="col-12 col-md-3 filterCollapse collapse d-md-block">
-                                    <select class="form-select">
-                                        <option value="1">10 per page</option>
-                                        <option selected>25 per page</option>
-                                        <option value="1">50 per page</option>
-                                        <option value="2">100 per page</option>
+                                <div class="col-6">
+                                    <select class="form-select" name="created" id="created">
+                                        <option value="1">Created: newest first</option>
+                                        <option value="2">Created: oldest first</option>
+                                        <option value="3">Updated: newest first</option>
+                                        <option value="4">Updated: oldest first</option>
                                     </select>
                                 </div>
                             </div>
-
-                            <ul class="nav nav-tabs">
-                                <li class="nav-item">
-                                    <a class="nav-link active" aria-current="page" href="#"><span>All</span></a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#"><span>Active</span> (20)</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#"><span>Draft</span> (1)</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#"><span>Cancelled</span> (2)</a>
-                                </li>
-                            </ul>
-
-                            <div class="table-responsive">
-                                <table class="table table-hover">
-                                    <thead>
-                                        <tr>
-                                            <th>Order</th>
-                                            <th>Date</th>
-                                            <th>Name</th>
-                                            <th>Status</th>
-                                            <th>Total</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr type="button" data-bs-toggle="modal" data-bs-target="#orderModal">
-                                            <td>PF75349744</td>
-                                            <td>3 minutes ago</td>
-                                            <td>Shanna Brown</td>
-                                            <td><span class="status status-active">Active</span></td>
-                                            <td>$23.25</td>
-                                        </tr>
-                                        <tr type="button" data-bs-toggle="modal" data-bs-target="#orderModal">
-                                            <td>PF75349744</td>
-                                            <td>15 minutes ago</td>
-                                            <td>Kyle Jorgenson</td>
-                                            <td><span class="status status-active">Active</span></td>
-                                            <td>$23.25</td>
-                                        </tr>
-                                        <tr type="button" data-bs-toggle="modal" data-bs-target="#orderModal">
-                                            <td>PF75349744</td>
-                                            <td>2 hours ago</td>
-                                            <td>Jadyn Olsem</td>
-                                            <td><span class="status status-draft">Draft</span></td>
-                                            <td>$23.25</td>
-                                        </tr>
-                                        <tr type="button" data-bs-toggle="modal" data-bs-target="#orderModal">
-                                            <td>PF75349744</td>
-                                            <td>May 5 2022, 3:49am</td>
-                                            <td>**** ****</td>
-                                            <td><span class="status status-draft">Draft</span></td>
-                                            <td>$23.25</td>
-                                        </tr>
-                                        <tr type="button" data-bs-toggle="modal" data-bs-target="#orderModal">
-                                            <td>PF75349744</td>
-                                            <td>May 5 2022, 3:49am</td>
-                                            <td>**** ****</td>
-                                            <td><span class="status status-cancelled">Cancelled</span></td>
-                                            <td>$23.25</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
+                            <div class="row">
+                                <div class="col-12 col-md-6 col-lg-4 col-xl-3">
+                                    <div class="create-template text-center">
+                                        <div><span class="mdi mdi-plus-circle"></span></div>
+                                        <strong>Create your first product template</strong>
+                                        <p>Add it to your store and publish online</p>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-6 col-lg-4 col-xl-3">
+                                    <div class="template">
+                                        <div>
+                                            <img src="assets/placeholders/template-img.png" class="img-fluid" alt="" />
+                                        </div>
+                                        <p><strong>Product template example</strong></p>
+                                        <div><span class="text-muted">Technique: </span>Printing(DTG)</div>
+                                        <div><span class="text-muted">Print files: </span>Front print</div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-6 col-lg-4 col-xl-3">
+                                    <div class="template">
+                                        <div>
+                                            <img src="assets/placeholders/template-img.png" class="img-fluid" alt="" />
+                                        </div>
+                                        <p><strong>Product template example</strong></p>
+                                        <div><span class="text-muted">Technique: </span>Printing(DTG)</div>
+                                        <div><span class="text-muted">Print files: </span>Front print</div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-6 col-lg-4 col-xl-3">
+                                    <div class="template">
+                                        <div>
+                                            <img src="assets/placeholders/template-img.png" class="img-fluid" alt="" />
+                                        </div>
+                                        <p><strong>Product template example</strong></p>
+                                        <div><span class="text-muted">Technique: </span>Printing(DTG)</div>
+                                        <div><span class="text-muted">Print files: </span>Front print</div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-
                     </div>
 
                     <footer>
@@ -371,205 +323,239 @@
         </div>
     </div>
 
-    <!-- Order Modal -->
-    <div class="modal order-modal" id="orderModal" tabindex="-1" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-scrollable modal-xl">
+    <div class="template-modal modal fade" id="templateModal" tabindex="-1" aria-labelledby="templateModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-fullscreen">
             <div class="modal-content">
-                <div class="modal-body">
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    <div class="row">
-                        <div class="col-12 col-lg-5">
-                            <h2>#PF75349744</h2>
-                            <div>May 5 2022, 3:49am</div>
-                        </div>
-                        <div class="col-12 col-lg-7">
-                            <h2>$23.25</h2>
-                            <div>1 item</div>
-                        </div>
+            <div class="modal-header">
+                <div class="row">
+                    <div class="col-6 col-md-5">
+                        <h5 class="modal-title" id="templateModalLabel">Create a product template</h5>
                     </div>
-
-                    <br />
-                    <div class="row">
-                        <div class="col-12">
-                            <!-- <div class="status-bar status-draft">Order is saved as draft. Complete it anytime</div> -->
-                            <!-- <div class="status-bar status-cancelled">Order is cancelled</div> -->
-                            <div class="status-bar status-fullfilled"><strong>Order is fullfilled.</strong> Delivered on May 10, 2022</div>
-                        </div>
+                    <div class="col-12 col-md-4">
+                        <ul class="nav nav-tabs" id="templateTab" role="tablist">
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link active" id="product-tab" data-bs-toggle="tab" data-bs-target="#product" type="button" role="tab" aria-controls="product" aria-selected="true"><span class="step">1</span> Product</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="design-tab" data-bs-toggle="tab" data-bs-target="#design" type="button" role="tab" aria-controls="design" aria-selected="false"><span class="step">2</span> Design</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="review-tab" data-bs-toggle="tab" data-bs-target="#review" type="button" role="tab" aria-controls="review" aria-selected="false"><span class="step">3</span> Review</button>
+                            </li>
+                        </ul>
                     </div>
-
-                    <div class="row">
-                        <div class="col-12 col-lg-9">
-                            <table class="table">
-                                <thead>
-                                    <tr>
-                                        <th>Product</th>
-                                        <th>Qty</th>
-                                        <th>Price</th>
-                                        <th>Total</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr class="shipment-report">
-                                        <td colspan="2">
-                                            <p>Shipment report #231232221 shipped on Jul 30 via USPS Priority Mail #4400300000000</p>
-                                            <p><strong>Delivered: Aug 4, 2016</strong></p>
-                                            <p><a href="#">P-slip</a></p>
-                                        </td>
-                                        <td colspan="2">
-                                            <a href="#" class="btn btn-default">Problem report</a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <div class="row">
-                                                <div class="col-2 col-xl-1">
-                                                    <img src="http://placehold.jp/40x40.png" class="img-fluid" alt="" />                                                </div>
-                                                <div class="col-10">
-                                                    <span class="badge bg-light text-dark">Printing (DTG)</span>
-                                                    <span class="badge bg-primary">Premium</span>
-                                                    <div class="title">Unisex Organic Sweatshirt | SOL'S 03574 (Black / L)</div>
-                                                    <div class="print">Front print: <a href="#">Mockup</a></div>
-                                                </div>
-                                            </div>
-                                        </td>
-                                        <td>1</td>
-                                        <td>$23.25</td>
-                                        <td>$23.25</td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <div class="row">
-                                                <div class="col-2 col-xl-1">
-                                                    <img src="http://placehold.jp/40x40.png" class="img-fluid" alt="" />                                                </div>
-                                                <div class="col-10">
-                                                    <span class="badge bg-light text-dark">Printing (DTG)</span>
-                                                    <span class="badge bg-primary">Premium</span>
-                                                    <div class="title">Unisex Organic Sweatshirt | SOL'S 03574 (Black / L)</div>
-                                                    <div class="print">Front print: <a href="#">Mockup</a></div>
-                                                </div>
-                                            </div>
-                                        </td>
-                                        <td>1</td>
-                                        <td>$23.25</td>
-                                        <td>$23.25</td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <div class="row">
-                                                <div class="col-2 col-xl-1">
-                                                    <img src="http://placehold.jp/40x40.png" class="img-fluid" alt="" />                                                </div>
-                                                <div class="col-10">
-                                                    <span class="badge bg-light text-dark">Printing (DTG)</span>
-                                                    <span class="badge bg-primary">Premium</span>
-                                                    <div class="title">Unisex Organic Sweatshirt | SOL'S 03574 (Black / L)</div>
-                                                    <div class="print">Front print: <a href="#">Mockup</a></div>
-                                                </div>
-                                            </div>
-                                        </td>
-                                        <td>1</td>
-                                        <td>$23.25</td>
-                                        <td>$23.25</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-
-                            <div class="total">
-                                <div class="row">
-                                    <div class="col-9"><strong>Subtotal</strong></div>
-                                    <div class="col-3 text-end">$23.25</div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-9"><strong>Shipping</strong> Flat Rate (3-4 business days after fulfillment)</div>
-                                    <div class="col-3 text-end">$0.00</div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-9"><strong>Total</strong></div>
-                                    <div class="col-3 text-end"><strong>$23.25</strong></div>
+                    <div class="col-6 col-md-3">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-body">
+                <div class="tab-content" id="templateTabContent">
+                    <div class="tab-pane fade show active" id="product" role="tabpanel" aria-labelledby="product-tab">
+                        <div class="row">
+                            <div class="col-12 col-md-9">
+                                <div class="breadcrumbs">
+                                    <a href="product.html">Products</a> / <a href="#">Men's</a> / <a href="#">Shirts</a> / <span class="current">T-shirts</span>
                                 </div>
                             </div>
-
-                            <div class="order-history">
-                                <h3>Order history</h3>
-
-                                <ul class="timeline">
-                                    <li class="timeline-item">
-                                        <div class="text-muted fw-bold">10 May 2022</div>
-                                        <p>
-                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit
-                                            necessitatibus adipisci, ad alias
-                                        </p>
+                            <div class="col-12 col-md-3">
+                                <input type="text" class="form-control" placeholder="Search">
+                            </div>
+                        </div>
+                        <div class="template-content row">
+                            <div class="template-menu col-12 col-md-3">
+                                <ul>
+                                    <li>
+                                        <a href="#">Drinkware</a>
+                                        <ul>
+                                            <li><a href="#">Water Bottles</a></li>
+                                            <li><a href="#" class="active">Tumblers</a></li>
+                                            <li><a href="#">Coffee Mugs</a></li>
+                                            <li><a href="#">Wine Cups</a></li>
+                                            <li><a href="#">Beverage Holders</a></li>
+                                        </ul>
                                     </li>
-                                    <li class="timeline-item">
-                                        <div class="text-muted fw-bold">10 May 2022</div>
-                                        <p>
-                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit
-                                            necessitatibus adipisci, ad alias
-                                        </p>
+                                    <li>
+                                        <a href="#">Men’s Clothing</a>
+                                        <ul>
+                                            <li><a href="#">Shirts</a></li>
+                                            <li><a href="#">Tank Tops</a></li>
+                                            <li><a href="#">Crew Necks</a></li>
+                                            <li><a href="#">Hoodies</a></li>
+                                        </ul>
                                     </li>
-                                    <li class="timeline-item">
-                                        <div class="text-muted fw-bold">10 May 2022</div>
-                                        <p>
-                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit
-                                            necessitatibus adipisci, ad alias
-                                        </p>
+                                    <li>
+                                        <a href="#">Women’s Clothing</a>
+                                        <ul>
+                                            <li><a href="#">Shirts</a></li>
+                                            <li><a href="#">Tank Tops</a></li>
+                                            <li><a href="#">Crew Necks</a></li>
+                                            <li><a href="#">Hoodies</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="#">Hats</a>
+                                        <ul>
+                                            <li><a href="#">Beanies</a></li>
+                                            <li><a href="#">Dad hats / Baseball caps</a></li>
+                                            <li><a href="#">Snapbacks</a></li>
+                                            <li><a href="#">Trucker hats</a></li>
+                                            <li><a href="#">5-panel hats</a></li>
+                                            <li><a href="#">Mesh hats</a></li>
+                                            <li><a href="#">Bucket hats</a></li>
+                                            <li><a href="#">Visors</a></li>
+                                        </ul>
                                     </li>
                                 </ul>
                             </div>
-
-
+                            <div class="col-12 col-md-9">
+                                <div class="row">
+                                    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                                        <div class="template-item">
+                                            <img src="assets/placeholders/template-img.png" class="img-fluid" alt="" />
+                                            <div class="title">All-Over Print Men's Crew Neck T-Shirt</div>
+                                            <div class="rating">
+                                                <span class="mdi mdi-star"></span>
+                                                <span class="mdi mdi-star"></span>
+                                                <span class="mdi mdi-star"></span>
+                                                <span class="mdi mdi-star-half-full"></span>
+                                                <span class="mdi mdi-star-outline"></span>
+                                                <a href="#">2 Reviews</a>
+                                            </div>
+                                            <p><strong>$28.75</strong></p>
+                                            <p class="text-muted"><strong>XS-2XL</strong></p>
+                                            <div>Shipping from <strong>Latvia, Spain</strong></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                                        <div class="template-item">
+                                            <img src="assets/placeholders/template-img.png" class="img-fluid" alt="" />
+                                            <div class="title">All-Over Print Men's Crew Neck T-Shirt</div>
+                                            <div class="rating">
+                                                <span class="mdi mdi-star"></span>
+                                                <span class="mdi mdi-star"></span>
+                                                <span class="mdi mdi-star"></span>
+                                                <span class="mdi mdi-star-half-full"></span>
+                                                <span class="mdi mdi-star-outline"></span>
+                                                <a href="#">2 Reviews</a>
+                                            </div>
+                                            <p><strong>$28.75</strong></p>
+                                            <p class="text-muted"><strong>XS-2XL</strong></p>
+                                            <div>Shipping from <strong>Latvia, Spain</strong></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                                        <div class="template-item">
+                                            <img src="assets/placeholders/template-img.png" class="img-fluid" alt="" />
+                                            <div class="title">All-Over Print Men's Crew Neck T-Shirt</div>
+                                            <div class="rating">
+                                                <span class="mdi mdi-star"></span>
+                                                <span class="mdi mdi-star"></span>
+                                                <span class="mdi mdi-star"></span>
+                                                <span class="mdi mdi-star-half-full"></span>
+                                                <span class="mdi mdi-star-outline"></span>
+                                                <a href="#">2 Reviews</a>
+                                            </div>
+                                            <p><strong>$28.75</strong></p>
+                                            <p class="text-muted"><strong>XS-2XL</strong></p>
+                                            <div>Shipping from <strong>Latvia, Spain</strong></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                                        <div class="template-item">
+                                            <img src="assets/placeholders/template-img.png" class="img-fluid" alt="" />
+                                            <div class="title">All-Over Print Men's Crew Neck T-Shirt</div>
+                                            <div class="rating">
+                                                <span class="mdi mdi-star"></span>
+                                                <span class="mdi mdi-star"></span>
+                                                <span class="mdi mdi-star"></span>
+                                                <span class="mdi mdi-star-half-full"></span>
+                                                <span class="mdi mdi-star-outline"></span>
+                                                <a href="#">2 Reviews</a>
+                                            </div>
+                                            <p><strong>$28.75</strong></p>
+                                            <p class="text-muted"><strong>XS-2XL</strong></p>
+                                            <div>Shipping from <strong>Latvia, Spain</strong></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                                        <div class="template-item">
+                                            <img src="assets/placeholders/template-img.png" class="img-fluid" alt="" />
+                                            <div class="title">All-Over Print Men's Crew Neck T-Shirt</div>
+                                            <div class="rating">
+                                                <span class="mdi mdi-star"></span>
+                                                <span class="mdi mdi-star"></span>
+                                                <span class="mdi mdi-star"></span>
+                                                <span class="mdi mdi-star-half-full"></span>
+                                                <span class="mdi mdi-star-outline"></span>
+                                                <a href="#">2 Reviews</a>
+                                            </div>
+                                            <p><strong>$28.75</strong></p>
+                                            <p class="text-muted"><strong>XS-2XL</strong></p>
+                                            <div>Shipping from <strong>Latvia, Spain</strong></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                                        <div class="template-item">
+                                            <img src="assets/placeholders/template-img.png" class="img-fluid" alt="" />
+                                            <div class="title">All-Over Print Men's Crew Neck T-Shirt</div>
+                                            <div class="rating">
+                                                <span class="mdi mdi-star"></span>
+                                                <span class="mdi mdi-star"></span>
+                                                <span class="mdi mdi-star"></span>
+                                                <span class="mdi mdi-star-half-full"></span>
+                                                <span class="mdi mdi-star-outline"></span>
+                                                <a href="#">2 Reviews</a>
+                                            </div>
+                                            <p><strong>$28.75</strong></p>
+                                            <p class="text-muted"><strong>XS-2XL</strong></p>
+                                            <div>Shipping from <strong>Latvia, Spain</strong></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="col-12 col-lg-3">
-                            <h5>Shipping Address</h5>
-                            <p>
-                                (727) 942-7948 <br>
-                                2019 Wailua Dr <br>
-                                Holiday, Florida(FL), 34691
-                            </p>
-                            <button class="btn btn-primary">Confirm Order</button>
-                            <button class="btn btn-default">Change Order</button>
-                            <button class="btn btn-default">Copy Order</button>
-                            <button class="btn btn-warning">Delete Order</button>
-
-                            <div class="pricing-breakdown dropdown">
-                                <button class="btn btn-secondary dropdown-toggle" type="button" id="breakdown" data-bs-toggle="dropdown" aria-expanded="false">
-                                    Pricing breakdown
-                                </button>
-                                <ul class="dropdown-menu" aria-labelledby="breakdown">
-                                    <li>
-                                        <div class="row">
-                                            <div class="col-8">
-                                                <strong>Your customer pays:</strong>
-                                            </div>
-                                            <div class="col-4 text-end">
-                                                $25.00
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="row">
-                                            <div class="col-8">
-                                                <strong>Prinful price:</strong>
-                                            </div>
-                                            <div class="col-4 text-end">
-                                                $20.00
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="row">
-                                            <div class="col-8">
-                                                <strong>Your profit:</strong>
-                                            </div>
-                                            <div class="col-4 text-end">
-                                                $5.00
-                                            </div>
-                                        </div>
-                                    </li>
-                                </ul>
+                    </div>
+                    <div class="tab-pane fade" id="design" role="tabpanel" aria-labelledby="design-tab">
+                        <!-- DESIGN TAB CONTENT -->
+                    </div>
+                    <div class="tab-pane fade" id="review" role="tabpanel" aria-labelledby="review-tab">
+                        <div class="template-review">
+                            <div class="row">
+                                <div class="col-12 col-md-4">
+                                    <img src="assets/placeholders/template-img.png" class="img-fluid" alt="" />
+                                </div>
+                                <div class="col-12 col-md-8">
+                                    <p><strong>Product template title</strong></p>
+                                    <p><input type="text" class="form-control" placeholder="Product title"></p>
+                                    <p><strong>Product</strong></p>
+                                    <p>Cuffed Beanie - Yupoong 1501KC</p>
+                                    <p><strong>Product colors</strong></p>
+                                    <p>Front Flat Embroidery</p>
+                                    <p><strong>Thread Colors</strong></p>
+                                    <p>Front Flat Embroidery</p>
+                                    <p><strong>Print files</strong></p>
+                                    <p>Front</p>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
+            </div>
+            <div class="modal-footer">
+                <div class="row">
+                    <div class="col-12 col-md-6">
+                        <button type="button" class="btn btn-default">Back</button>
+                        <button type="button" class="btn btn-primary">Continue</button>
+                    </div>
+                    <div class="col-12 col-md-6 text-end">
+                        <div class="footer-price">
+                            <div><strong>$13.25</strong></div>
+                            <div class="text-muted">Excl. taxes and other charges</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
             </div>
         </div>
     </div>

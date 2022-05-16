@@ -39,6 +39,11 @@ a {
     box-sizing: border-box;
 }
 
+.btn:focus {
+    outline: none;
+    box-shadow: none;
+}
+
 .btn:hover:not(.disabled):not([disabled]) {
     box-shadow: 0 2px 4px 0 rgb(0 0 0 / 25%);
 }
@@ -49,6 +54,7 @@ a {
     color: #fff;
 }
 
+.btn-primary:focus,
 .btn-primary:hover {
     border-color: #6a0705;
     background: #e40f0a;
@@ -60,6 +66,7 @@ a {
     color: #222;
 }
 
+.btn-default:focus,
 .btn-default:hover {
     border-color: #b1b1b1;
     box-shadow: 0 2px 4px 0 rgb(0 0 0 / 25%);
@@ -71,6 +78,7 @@ a {
     color: #222;
 }
 
+.btn-warning:focus,
 .btn-warning:hover {
     border-color: #f7c657;
     background: #feecaf;
@@ -1218,6 +1226,176 @@ footer {
 }
 
 
+.templates-list .filters {
+    margin-bottom: 30px;
+}
+
+.templates-list .create-template {
+    cursor: pointer;
+    min-height: 361px;
+    width: 100%;
+    border: 2px dashed #e5e5e5;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    padding: 35% 15px;
+}
+
+.templates-list .create-template .mdi {
+    font-size: 48px;
+    color: #0c8512;
+}
+
+.templates-list .template {
+    cursor: pointer;
+    min-height: 361px;
+    width: 100%;
+    border: 1px solid #e5e5e5;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 15px;
+}
+
+.templates-list .template:hover,
+.templates-list .create-template:hover {
+    background-color: #f8f8f8;
+    box-shadow: 0 1px 5px rgb(0 0 0 / 15%);
+}
+
+
+
+.template-modal .step {
+    display: inline-block;
+    font-size: 13px;
+    border: 2px solid #e5e5e5;
+    border-radius: 50%;
+    color: #222;
+    width: 25px;
+    height: 25px;
+    line-height: 22px;
+}
+
+.template-modal .active .step {
+    background: #222;
+    border-color: #222;
+    color: #fff;
+}
+
+.template-modal .modal-header {
+    display: block;
+}
+
+.template-modal .modal-title {
+    font-weight: 700;
+}
+
+.template-modal .nav-tabs {
+    position: absolute;
+    top: 0;
+    left: calc(50% - 150px);
+    margin: 20px 0 0;
+}
+
+.template-modal .nav-link {
+    color: #888;
+    margin: 0 15px;
+}
+
+.template-modal .nav-link.active {
+    font-weight: 700;
+    color: #222;
+}
+
+.template-modal .nav-tabs,
+.template-modal .nav-tabs ul,
+.template-modal .nav-tabs li,
+.template-modal .nav-tabs button {
+    border: none;
+    padding: 0;
+}
+
+.template-modal .template-content {
+    margin-top: 30px;
+}
+
+.template-modal .template-menu {
+    margin-bottom: 25px;
+}
+
+.template-modal .template-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.template-modal .template-menu a {
+    display: block;
+    color: #222;
+}
+
+.template-modal .template-menu>ul>li>a {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    line-height: 35px;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.template-modal .template-menu>ul>li>ul>li>a {
+    padding-left: 15px;
+    margin-bottom: 15px;
+    border-left: 3px solid transparent
+}
+
+.template-modal .template-menu>ul>li>ul>li>a.active,
+.template-modal .template-menu>ul>li>ul>li>a:hover {
+    border-color: #e40f0a;
+    font-weight: 700;
+}
+
+.template-modal .title {
+    font-size: 16px;
+    margin-top: 15px;
+}
+
+.template-modal .rating {
+    margin: 10px 0;
+}
+
+.template-modal .rating span {
+    color: #f2c994;
+    font-size: 18px;
+}
+
+.template-modal .rating a {
+    font-size: 12px;
+    color: #222;
+    position: relative;
+    top: -2px;
+}
+
+.template-modal .template-item {
+    border: 1px solid #e5e5e5;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 15px;
+}
+
+.template-modal .template-item:hover {
+    cursor: pointer;
+    box-shadow: 0 1px 5px rgb(0 0 0 / 15%);
+}
+
+.template-modal .template-review {
+    max-width: 900px;
+    margin: 25px auto;
+}
+
+.template-modal .modal-footer {
+    display: block;
+}
+
+
+
 
 @media (min-width: 992px) {
     #sidebarMenu {
@@ -1269,6 +1447,7 @@ footer {
     .main-wrapper {
         padding-top: 50px;
     }
+
 }
 
 @media (max-width: 767px) {
@@ -1297,5 +1476,9 @@ footer {
 
     .orders-table .filters .col-12 {
         margin-bottom: 15px;
+    }
+
+    .template-modal .nav-tabs {
+        position: static;
     }
 }
