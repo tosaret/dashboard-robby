@@ -1199,6 +1199,24 @@ footer {
     padding: 15px;
 }
 
+.product-inner .mobile-footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    padding: 15px;
+    z-index: 999;
+    box-shadow: 0 1px 5px rgb(0 0 0 / 15%);
+    background: hsla(0, 0%, 100%, .95);
+}
+
+.product-inner .mobile-footer .price {
+    font-size: 24px;
+    line-height: 42px;
+    font-weight: 700;
+}
+
 
 
 @media (min-width: 992px) {
